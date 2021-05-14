@@ -26,7 +26,7 @@ node7 = TreeNode(data="N7")
 node4.leftChild = node6
 node4.rightChild = node7
 
-# print(node4.__dict__)
+# print(node4.__dict__) 
 
 node8 = TreeNode(data="N8")
 node9 = TreeNode(data="N9")
@@ -38,21 +38,26 @@ node3.rightChild = node9
 
 # preorder traverse
 
+print("PreOrder Traverse")
 def preOrderTraversal(root_node):
-    if not root_node:
-        return 
-    print(root_node.data, end=" , ")
-    preOrderTraversal(root_node.leftChild)
-    preOrderTraversal(root_node.rightChild)
+    if root_node == None:
+        pass
+    else: 
+        print(root_node.data, end="  ")
+        preOrderTraversal(root_node.leftChild)
+        preOrderTraversal(root_node.rightChild)
 
-print(preOrderTraversal(node1))
+preOrderTraversal(node1)
 
+#postorder traverse
 
+print("\nPostOrder Traverse")
 def postOrderTraversal(root_node):
-    if not  root_node:
-        return
-    postOrderTraversal(root_node.leftChild)
-    postOrderTraversal(root_node.rightChild)
-    print(root_node.data, end=" , " )
+    if root_node == None:
+        pass
+    else:
+        postOrderTraversal(root_node.leftChild)
+        postOrderTraversal(root_node.rightChild)
+        print(root_node.data, end="  " )
 
-print(postOrderTraversal(node1))
+postOrderTraversal(node1)
