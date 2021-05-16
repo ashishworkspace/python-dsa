@@ -11,23 +11,11 @@ class Queue:
         self.queue = []
     def enqueue(self, data):
         self.queue.insert(0, data)
-    # def dequeue(self):
-    #     return self.queue.pop()
     def popFromLeft(self):
         tmp = self.queue[0]
         del(self.queue[0])
         return tmp
-    # def printQueue(self):
-    #     print(self.queue)
 
-# q = Queue()
-# q.enqueue(1)
-# q.enqueue(2)
-# q.enqueue(3)
-# q.enqueue(4)
-
-# print(q.popFromLeft())
-# q.printQueue()
 
 n0 = TreeNode("/root")
 n1 = TreeNode("/root/Desktop")
@@ -48,7 +36,7 @@ n6 = TreeNode("/root/Desktop/vscode.exe")
 n1.leftChild = n5
 n1.rightChild = n6
 
-# print(n0.__dict__, n2.__dict__, n1.__dict__)
+
 
 que = Queue() # creating an object for Queue class
 
