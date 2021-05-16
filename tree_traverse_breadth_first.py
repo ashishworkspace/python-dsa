@@ -17,8 +17,8 @@ class Queue:
         tmp = self.queue[0]
         del(self.queue[0])
         return tmp
-    def printQueue(self):
-        print(self.queue)
+    # def printQueue(self):
+    #     print(self.queue)
 
 # q = Queue()
 # q.enqueue(1)
@@ -50,16 +50,16 @@ n1.rightChild = n6
 
 # print(n0.__dict__, n2.__dict__, n1.__dict__)
 
-que = Queue()
+que = Queue() # creating an object for Queue class
 
 def breadthFirst(node):
     que.enqueue(node)
     while len(que.queue) != 0:
         popedVal = que.popFromLeft()
         print(popedVal.data)
-        if popedVal.leftChild is not None:
+        if popedVal.leftChild != None:
             que.enqueue(popedVal.leftChild)
-        if popedVal.rightChild is not None:
+        if popedVal.rightChild != None:
             que.enqueue(popedVal.rightChild)
 
 breadthFirst(n0)
