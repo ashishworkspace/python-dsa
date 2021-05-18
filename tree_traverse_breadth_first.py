@@ -42,13 +42,13 @@ que = Queue() # creating an object for Queue class
 
 def breadthFirst(node):
     que.enqueue(node)
-    while len(que.queue) != 0:
-        popedVal = que.popFromLeft()
+    while len(que.queue) != 0:                      # This Loop will run until the queue is empty
+        popedVal = que.popFromLeft()                # popFromLeft() helps to pop an element from Left
         print(popedVal.data)
-        if popedVal.leftChild != None:
+        if popedVal.leftChild != None:              # IF the Left Child Node is Not none then append it into the queue. 
             que.enqueue(popedVal.leftChild)
         if popedVal.rightChild != None:
-            que.enqueue(popedVal.rightChild)
+            que.enqueue(popedVal.rightChild)        # IF the Right Child Node is Not none then append it into the queue.
 
 breadthFirst(n0)
 
